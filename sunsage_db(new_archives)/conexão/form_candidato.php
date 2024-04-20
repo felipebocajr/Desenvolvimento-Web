@@ -10,7 +10,7 @@
 
 <h2>Cadastro de Candidato</h2>
 
-<form enctype="multipart/form-data" id="form-candidato" method="POST" action="add_candidato(new).php" enctype="multipart/form-data">
+<form enctype="multipart/form-data" id="form-candidato" method="POST" action="add_candidato.php" enctype="multipart/form-data">
     <label for="nome">Nome:</label>
     <input type="text" id="nome" name="nome" required><br>
     <label for="email">Email:</label>

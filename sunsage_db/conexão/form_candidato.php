@@ -10,7 +10,7 @@
 
 <h2>Cadastro de Candidato</h2>
 
-<form id="form-candidato" method="POST" action="adicionar_candidato.php" enctype="multipart/form-data">
+<form enctype="multipart/form-data" id="form-candidato" method="POST" action="add_candidato.php" enctype="multipart/form-data">
     <label for="nome">Nome:</label>
     <input type="text" id="nome" name="nome" required><br>
     <label for="email">Email:</label>
@@ -21,7 +21,7 @@
     <input type="tel" id="telefone" name="telefone" required><br>
     <label for="curriculo">Currículo:</label>
     <input type="file" id="curriculo" name="curriculo" required accept=".pdf"><br>
-    <button type="submit" name="submit">Enviar</button>
+    <button type="submit" name="submit">Enviar currículo</button>
 </form>
 
 </body>
