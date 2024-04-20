@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
 
 <?php
 
@@ -32,15 +24,17 @@ $novoNomeDoCurriculo = uniqid();
 $extensao = strtolower(pathinfo($nomeDoCurriculo, PATHINFO_EXTENSION));
 
 if ($extensao != "pdf")
-die("Tipo de arquivo não aceito");
+    die("Tipo de arquivo não aceito");
 
-$deu_certo = move_uploaded_file($curriculo["tmp_name"], $pasta. $novoNomeDoCurriculo . "." . $extensao);
-if($deu_certo)
+$path = $pasta. $novoNomeDoCurriculo . "." . $extensao;
+
+$deu_certo = move_uploaded_file($curriculo["tmp_name"], $path);
+if($deu_certo) { 
+    $strcon ->query("INSERT INTO curriculo (curriculo, paths) VALUES ('$nomeDoCurriculo', '$path')") or die($strcon->error);
     echo "<p>Currículo enviado com sucesso";
-else
-    echo "Falha ao enviar o arquivo"
+} else  
+    echo "Falha ao enviar o arquivo<br>";
+    echo "Erro: " . $_FILES['curriculo']['error'];
 
 ?>
     
-</body>
-</html>
