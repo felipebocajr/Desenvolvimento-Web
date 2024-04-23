@@ -1,3 +1,31 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Tempo de geração: 24/04/2024 às 01:04
+-- Versão do servidor: 10.4.32-MariaDB
+-- Versão do PHP: 8.2.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Banco de dados: `sunsage_db`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `administrador`
+--
 
 CREATE TABLE `administrador` (
   `ID` int(11) NOT NULL,
@@ -6,7 +34,7 @@ CREATE TABLE `administrador` (
   `email` varchar(50) DEFAULT NULL,
   `nome_completo` varchar(255) DEFAULT NULL,
   `data_criacao` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -17,7 +45,7 @@ CREATE TABLE `administrador` (
 CREATE TABLE `administrador_vaga` (
   `ID_administrador` int(11) DEFAULT NULL,
   `ID_vaga` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -30,18 +58,21 @@ CREATE TABLE `candidato` (
   `nome` varchar(255) DEFAULT NULL,
   `CPF` int(11) DEFAULT NULL,
   `email` varchar(50) DEFAULT NULL,
-  `numero_telefone` int(11) DEFAULT NULL,
+  `numero_telefone` varchar(20) DEFAULT NULL,
   `paths` varchar(100) NOT NULL,
+  `situacao` varchar(20) NOT NULL DEFAULT 'não definida',
   `data_envio` datetime NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Despejando dados para a tabela `candidato`
 --
 
-INSERT INTO `candidato` (`ID`, `nome`, `CPF`, `email`, `numero_telefone`, `paths`, `data_envio`) VALUES
-(1, 'Felipe Bochiniteste', 2147483647, 'bochinifelipe@gmail.com', 2147483647, '', '2024-04-20 00:52:01'),
-(2, 'Felipe Bochinitestee', 2147483647, 'bochinifelipe@gmail.com', 2147483647, 'curriculos/66233d35d627a.pdf', '2024-04-20 00:57:41');
+INSERT INTO `candidato` (`ID`, `nome`, `CPF`, `email`, `numero_telefone`, `paths`, `situacao`, `data_envio`) VALUES
+(16, 'Felipe Bochini', 2147483647, 'bochinifelipe@gmail.com', '15997741530', 'curriculos/6623cb02621e5.pdf', 'não definida', '2024-04-20 11:02:42'),
+(17, '56629851896', 2147483647, 'bochinifelipe@gmail.com', '15997741530', 'curriculos/6626ec922dfa9.pdf', 'não definida', '2024-04-22 20:02:42'),
+(18, '56629851896', 2147483647, 'bochinifelipe@gmail.com', '15997741530', 'curriculos/6628300f5c39f.pdf', 'não definida', '2024-04-23 19:02:55'),
+(19, '56629851896', 2147483647, 'bochinifelipe@gmail.com', '15997741530', 'curriculos/662832d51516e.pdf', 'não definida', '2024-04-23 19:14:45');
 
 -- --------------------------------------------------------
 
@@ -52,7 +83,7 @@ INSERT INTO `candidato` (`ID`, `nome`, `CPF`, `email`, `numero_telefone`, `paths
 CREATE TABLE `candidato_vaga` (
   `ID_candidato` int(11) DEFAULT NULL,
   `ID_vaga` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -64,7 +95,7 @@ CREATE TABLE `vaga` (
   `ID` int(11) NOT NULL,
   `nome` varchar(255) DEFAULT NULL,
   `quantidade` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Índices para tabelas despejadas
@@ -116,7 +147,7 @@ ALTER TABLE `administrador`
 -- AUTO_INCREMENT de tabela `candidato`
 --
 ALTER TABLE `candidato`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT de tabela `vaga`
