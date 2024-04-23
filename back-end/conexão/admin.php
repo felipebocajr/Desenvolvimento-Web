@@ -24,6 +24,7 @@
             <th>Atualizar situação</th>
             <th>Ações</th>
         </tr>
+
         <?php
         // Conexão com o banco de dados
         $strcon = mysqli_connect("localhost", "root", "", "sunsage_db") or die("Erro ao conectar com o banco");
@@ -41,7 +42,11 @@
                 echo "<td>" . $row["numero_telefone"] . "</td>";
                 echo "<td><button onclick='viewPDF(\"" . $row["paths"] . "\")'>Visualizar PDF</button> </td>";
                 echo "<td class = 'situ'>" . $row["situacao"] . "</td>";
-                echo "<td class = 'alterarsitu'><button onclick='aprovarCurriculo()'>Aprovar</button><button onclick='reprovarCurriculo()'>Reprovar</button><button onclick='curriculoEmAnalise()'>Em Análise</button></td>";
+                echo "<td class = 'alterarsitu'>";
+                echo "<button onclick='aprovarCurriculo()'>Aprovar</button>";
+                echo "<button onclick='reprovarCurriculo()'>Reprovar</button>";
+                echo "<button onclick='curriculoEmAnalise()'>Em Análise</button>";
+                echo "</td>";
                 echo "<td><button onclick='updateCandidate(" . $row["ID"] . ")'>Atualizar</button> </td>";
                 echo "</tr>";
             }
