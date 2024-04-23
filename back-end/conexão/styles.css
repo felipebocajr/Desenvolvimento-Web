@@ -72,5 +72,12 @@ th {
 }
 
 .alterarsitu button {
+
     margin: 5px;
+}
+
+.alterarsitu button:active,
+button:focus,
+button:active:focus {
+  background-color: rgb(161, 161, 161);
 }
