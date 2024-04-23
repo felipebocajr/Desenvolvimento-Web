@@ -52,7 +52,8 @@ table {
     border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
@@ -72,12 +73,11 @@ th {
 }
 
 .alterarsitu button {
-
     margin: 5px;
 }
 
 .alterarsitu button:active,
 button:focus,
 button:active:focus {
-  background-color: rgb(161, 161, 161);
+    background-color: rgb(161, 161, 161);
 }

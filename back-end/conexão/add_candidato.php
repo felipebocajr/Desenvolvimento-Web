@@ -1,4 +1,3 @@
-
 <?php
 
 $nome = $_POST['nome'];
@@ -24,10 +23,10 @@ $path = $pasta . $novoNomeDoCurriculo . "." . $extensao;
 
 $deu_certo = move_uploaded_file($curriculo["tmp_name"], $path);
 if ($deu_certo) {
-    echo "<p>Currículo enviado com sucesso";
+    echo "<p>Currículo enviado com sucesso<p>";
 } else
     echo "Falha ao enviar o arquivo<br>";
-    echo "Erro: " . $_FILES['curriculo']['error'];
+echo "Erro: " . $_FILES['curriculo']['error'];
 
 $nome = trim($cpf);
 
@@ -38,4 +37,3 @@ $stmt_candidato->execute();
 $stmt_candidato->close();
 
 ?>
-    
