@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerenciamento de Candidatos</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -41,13 +42,15 @@
                 echo "<td>" . $row["email"] . "</td>";
                 echo "<td>" . $row["numero_telefone"] . "</td>";
                 echo "<td><button onclick='viewPDF(\"" . $row["paths"] . "\")'>Visualizar PDF</button> </td>";
-                echo "<td class = 'situ'>" . $row["situacao"] . "</td>";
-                echo "<td class = 'alterarsitu'>";
-                echo "<button onclick='aprovarCurriculo()'>Aprovar</button>";
-                echo "<button onclick='reprovarCurriculo()'>Reprovar</button>";
-                echo "<button onclick='curriculoEmAnalise()'>Em Análise</button>";
+                echo "<td class='situ' id='situacao-" . $row["ID"] . "'>" . $row["situacao"] . "</td>";
+                echo "<td class='alterarsitu'>";
+                echo "<select id='statusSelect'>";
+                echo "<option value='aprovado'>aprovado</option>";
+                echo "<option value='reprovado'>reprovado</option>";
+                echo "<option value='em analise'>Em análise</option>";
+                echo "</select>";
                 echo "</td>";
-                echo "<td><button onclick='updateCandidate(" . $row["ID"] . ")'>Atualizar</button> </td>";
+                echo "<td><button onclick='alterarsituacao(" . $row["ID"] . ")'>Atualizar</button></td>";
                 echo "</tr>";
             }
         } else {
@@ -55,6 +58,25 @@
         }
         ?>
     </table>
+
+    <div id="resultado"></div>
+
+    <script>
+    function alterarsituacao(candidatoID) {
+        var novoStatus = document.getElementById("statusSelect").value;
+
+        $.ajax({
+            type: "POST",
+            url: "alterar_status_candidato.php",
+            data: { candidatoID: candidatoID, novoStatus: novoStatus },
+            success: function (response) {
+                // Atualizar dinamicamente a célula da tabela que exibe a situação do candidato
+                $("#situacao-" + candidatoID).html(novoStatus);
+            }
+        });
+    }
+</script>
+
 
     <div id="update-form" style="display: none;">
         <!-- Formulário de atualização -->
