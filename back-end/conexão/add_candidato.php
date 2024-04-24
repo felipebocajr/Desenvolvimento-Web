@@ -28,12 +28,11 @@ if ($deu_certo) {
     echo "Falha ao enviar o arquivo<br>";
 echo "Erro: " . $_FILES['curriculo']['error'];
 
-$nome = trim($cpf);
+$cpf = trim($cpf);
 
 $sql_candidato = "INSERT INTO candidato (nome, email, CPF, numero_telefone, paths) VALUES (?, ?, ?, ?, ?)";
 $stmt_candidato = $strcon->prepare($sql_candidato);
 $stmt_candidato->bind_param("ssiss", $nome, $email, $cpf, $telefone, $path);
 $stmt_candidato->execute();
 $stmt_candidato->close();
-
 ?>
