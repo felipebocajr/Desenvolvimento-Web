@@ -71,13 +71,3 @@ th {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
-.alterarsitu button {
-    margin: 5px;
-}
-
-.alterarsitu button:active,
-button:focus,
-button:active:focus {
-    background-color: rgb(161, 161, 161);
-}
