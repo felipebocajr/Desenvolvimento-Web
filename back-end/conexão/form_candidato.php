@@ -32,7 +32,7 @@
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required><br>
             <label for="cpf">CPF:</label>
-            <input type="text" id="cpf" name="cpf" onkey required><br>
+            <input type="text" id="cpf" name="cpf" required><br>
             <label for="telefone">Telefone:</label>
             <input type="tel" id="telefone" name="telefone" required><br>
             <label for="curriculo">Currículo:</label>

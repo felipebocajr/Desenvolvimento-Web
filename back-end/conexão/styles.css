@@ -71,3 +71,26 @@ th {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+#candidatos-table {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1); 
+}
+
+.btn-atualizar {
+    margin: 10px; 
+
+}
+
+.alterarsitu {
+    text-align: center;
+}
+
+.tabletop th {
+    text-align: center;
+}
+
+.statusSelect {
+    width: 100px;
+    height: 25px;
+}
+

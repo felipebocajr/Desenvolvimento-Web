@@ -14,7 +14,7 @@
     <h2>Gerenciamento de Candidatos</h2>
 
     <table id="candidatos-table">
-        <tr>
+        <tr class = 'tabletop'>
             <th>ID</th>
             <th>Nome</th>
             <th>CPF</th>
@@ -23,7 +23,6 @@
             <th>Currículo</th>
             <th>Situação atual</th>
             <th>Atualizar situação</th>
-            <th>Ações</th>
         </tr>
 
         <?php
@@ -44,14 +43,15 @@
                 echo "<td><button onclick='viewPDF(\"" . $row["paths"] . "\")'>Visualizar PDF</button> </td>";
                 echo "<td class='situ' id='situacao-" . $row["ID"] . "'>" . $row["situacao"] . "</td>";
                 echo "<td class='alterarsitu'>";
-                echo "<select id='statusSelect'>";
+                echo "<select class='statusSelect' data-candidato-id='" . $row["ID"] . "'>";
                 echo "<option value='aprovado'>aprovado</option>";
                 echo "<option value='reprovado'>reprovado</option>";
                 echo "<option value='em analise'>Em análise</option>";
                 echo "</select>";
+                echo "<button class='btn-atualizar' onclick='alterarsituacao(" . $row["ID"] . ")'>Atualizar</button>"; 
                 echo "</td>";
-                echo "<td><button onclick='alterarsituacao(" . $row["ID"] . ")'>Atualizar</button></td>";
                 echo "</tr>";
+
             }
         } else {
             echo "<tr><td colspan='6'>Nenhum candidato encontrado.</td></tr>";
@@ -62,20 +62,19 @@
     <div id="resultado"></div>
 
     <script>
-    function alterarsituacao(candidatoID) {
-        var novoStatus = document.getElementById("statusSelect").value;
+        function alterarsituacao(candidatoID) {
+            var novoStatus = $(".statusSelect[data-candidato-id='" + candidatoID + "']").val();
 
-        $.ajax({
-            type: "POST",
-            url: "alterar_status_candidato.php",
-            data: { candidatoID: candidatoID, novoStatus: novoStatus },
-            success: function (response) {
-                // Atualizar dinamicamente a célula da tabela que exibe a situação do candidato
-                $("#situacao-" + candidatoID).html(novoStatus);
-            }
-        });
-    }
-</script>
+            $.ajax({
+                type: "POST",
+                url: "alterar_status_candidato.php",
+                data: { candidatoID: candidatoID, novoStatus: novoStatus },
+                success: function (response) {
+                    $("#situacao-" + candidatoID).html(novoStatus);
+                }
+            });
+        }
+    </script>
 
 
     <div id="update-form" style="display: none;">

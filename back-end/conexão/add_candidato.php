@@ -21,6 +21,8 @@ if ($extensao != "pdf")
 
 $path = $pasta . $novoNomeDoCurriculo . "." . $extensao;
 
+$cpf = trim($cpf);
+
 $deu_certo = move_uploaded_file($curriculo["tmp_name"], $path);
 if ($deu_certo) {
     echo "<p>Currículo enviado com sucesso<p>";
@@ -28,11 +30,10 @@ if ($deu_certo) {
     echo "Falha ao enviar o arquivo<br>";
 echo "Erro: " . $_FILES['curriculo']['error'];
 
-$cpf = trim($cpf);
 
 $sql_candidato = "INSERT INTO candidato (nome, email, CPF, numero_telefone, paths) VALUES (?, ?, ?, ?, ?)";
 $stmt_candidato = $strcon->prepare($sql_candidato);
-$stmt_candidato->bind_param("ssiss", $nome, $email, $cpf, $telefone, $path);
+$stmt_candidato->bind_param("sssss", $nome, $email, $cpf, $telefone, $path);
 $stmt_candidato->execute();
 $stmt_candidato->close();
 ?>
