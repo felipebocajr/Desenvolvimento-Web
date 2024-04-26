@@ -20,7 +20,7 @@ $novoStatus = $_POST['novoStatus'];
 // Atualizar o campo 'status' no banco de dados
 $sql = "UPDATE candidato SET situacao='$novoStatus' WHERE id=$candidatoID"; // Usando o ID do candidato recebido
 if ($conn->query($sql) === TRUE) {
-    echo "Status alterado com sucesso!";
+    echo $novoStatus; // Envie o novo status de volta para o JavaScript
 } else {
     echo "Erro ao alterar status: " . $conn->error;
 }
