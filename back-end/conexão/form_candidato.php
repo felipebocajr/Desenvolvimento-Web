@@ -7,18 +7,6 @@
         <title>Cadastro de Candidato</title>
         <link rel="stylesheet" href="styles.css">
 
-        <script>
-            function validarCPF() {
-                var cpfInput = document.getElementById("cpf");
-                var cpf = cpfInput.value.replace(/[^\d]/g, ''); // Remove caracteres não numéricos
-                if (cpf.length !== 11) {
-                    alert("CPF inválido. Por favor, insira um CPF com 11 dígitos.");
-                    return false; // Impede o envio do formulário
-                }
-                return true; // Permite o envio do formulário
-            }
-        </script>
-
     </head>
 
     <body>
@@ -39,6 +27,33 @@
             <input type="file" id="curriculo" name="curriculo" required accept=".pdf"><br>
             <button type="submit" name="submit">Enviar currículo</button>
         </form>
+
+        <script>
+        function validarCPF() {
+            var cpfInput = document.getElementById("cpf");
+            var cpf = cpfInput.value.replace(/[^\d]/g, ''); 
+
+            if (cpf.length !== 11 || cpfInput.value !== cpf) {
+                alert("CPF inválido. Por favor, insira um CPF válido.");
+                cpfInput.value = cpf; 
+                return false;
+            }
+
+            return true;
+        }
+
+        // Bloquear caracteres especiais no campo de CPF e limitar a 11 dígitos
+        document.addEventListener("DOMContentLoaded", function () {
+            var cpfInput = document.getElementById("cpf");
+            cpfInput.addEventListener("input", function () {
+                var sanitizedValue = this.value.replace(/[^\d]/g, ''); 
+                this.value = sanitizedValue.slice(0, 11); 
+            });
+        });
+
+    </script>
+
+
 
     </body>
 

@@ -9,8 +9,6 @@ $curriculo = $_FILES['curriculo'];
 
 $strcon = mysqli_connect("localhost", "root", "", "sunsage_db") or die("Erro ao conectar com o banco");
 
-// Inserir os dados do candidato na tabela candidato usando instrução preparada
-
 $pasta = "curriculos/";
 $nomeDoCurriculo = $curriculo["name"];
 $novoNomeDoCurriculo = uniqid();
@@ -21,7 +19,7 @@ if ($extensao != "pdf")
 
 $path = $pasta . $novoNomeDoCurriculo . "." . $extensao;
 
-$cpf = trim($cpf);
+$cpf = preg_replace('/[^0-9]/', '', $cpf);
 
 $deu_certo = move_uploaded_file($curriculo["tmp_name"], $path);
 if ($deu_certo) {

@@ -74,11 +74,12 @@ th {
 
 #candidatos-table {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1); 
+    border-radius: 15px;
 }
 
 .btn-atualizar {
     margin: 10px; 
-
+    border-radius: 15px;
 }
 
 .alterarsitu {
@@ -93,4 +94,3 @@ th {
     width: 100px;
     height: 25px;
 }
-
