@@ -506,6 +506,7 @@ input[type="submit"]:hover {
 .oportunidade h3{
   margin-top: 60px;
   margin-left: 60px;
+  margin-bottom: 40px;
 }
 
 .container-vagas {
@@ -543,7 +544,17 @@ input[type="submit"]:hover {
 
 #footer {
   font-size: 14px;
-  background: grey
+  background: grey;
+  margin-top: 100px;
+  
+}
+
+.bloco a{
+  color:#444444
+}
+
+.bloco a:hover{
+  color: #7E12C0;
 }
 
 #footer .footer-newsletter {
