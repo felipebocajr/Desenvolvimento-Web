@@ -11,6 +11,12 @@ $curriculo = $_FILES['curriculo'];
 
 $strcon = mysqli_connect("localhost", "root", "", "sunsage_db") or die("Erro ao conectar com o banco");
 
+$query = "SELECT id FROM vaga WHERE id = ?";
+$stmt = $strcon->prepare($query);
+$stmt->bind_param("i", $vaga);
+$stmt->execute();
+$stmt->store_result();
+
 $pasta = "curriculos/";
 $nomeDoCurriculo = $curriculo["name"];
 $novoNomeDoCurriculo = uniqid();

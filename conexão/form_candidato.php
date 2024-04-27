@@ -25,12 +25,12 @@
         die("Erro de conexão: " . $conexao->connect_error);
     }
 
-    $query = "SELECT id, nome FROM vaga";
+    $query = "SELECT id, nome, vagas_livres FROM vaga";
     $result = $conexao->query($query);
 
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
-            echo "<option value='" . $row['id'] . "'>" . $row['nome'] . "</option>";
+            echo "<option value='" . $row['id'] . "'>" . $row['nome'] . " - Vagas abertas: " . $row['vagas_livres'] . "</option>";
         }
     } else {
         echo "<option disabled>Nenhuma vaga disponível</option>";
