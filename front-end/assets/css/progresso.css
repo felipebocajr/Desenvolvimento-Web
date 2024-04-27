@@ -415,7 +415,7 @@
     #hero {
       width: 100%;
       height: 95vh;
-      background-image: url('/front-end/assets/img/wave-cinza.png');
+      background-image: url('/front-end/assets/img/onda\ cinza\ solo.png');
       background-size: cover;
     }
     
@@ -423,304 +423,43 @@
       padding-top: 72px;
     }
     
-   
+    #hero h2{
+        font-size: 40px;
+        margin-left: 60px;
+        font-weight: bold;
+
+    }
+
+    .container-prog img{
+        margin-left: 100px;
+    }
+
+    .container-prog{
+        display: flex;
+    }
     
-  
-  /* Input de buscar e botão enviar*/
-  
-  /* Estilos para o input de busca e botão enviar */
-  
-  .center-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .container {
-    text-align: center;
-  }
-  
-  h2 {
-    margin-bottom: 10px;
-    margin-left:  290px;
-  }
-  
-  .input-container {
-    display: inline-flex;
-    align-items: center;
-  }
-  
-  input[type="text"] {
-    padding: 15px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 7px;
-    width: 600px;
-    margin-bottom: 80px;
-    margin-left: 400px;
-  }
-  
-  input[type="submit"] {
-    padding: 15px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 6px;
-    background-color: #9e9e9e;
-    color: #fff;
-    cursor: pointer;
-    font-weight: bolder;
-    margin-bottom: 80px;
-  }
-  
-  input[type="submit"]:hover {
-    background-color: #858585;
-  }
-  
-  .bloco-vaga {
-    position: relative;
-  }
-  
-  .bloco-vaga img {
-    width: 650px;
-    height: auto;
-    margin-top: 70px;
-    margin-left: 350px;
-  }
-  
-  .botao {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 25px;
-    background-color: #7E12C0;
-    color: #fff;
-    text-decoration: none;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-    font-weight: bolder;
-    z-index: 1; /* Para garantir que o botão esteja acima da imagem */
-    margin-top: 75px;
-    width: 350px;
-    height: auto;
-    text-align: center;
-    margin-left: 180px;
-  }
-  
-  .botao:hover {
-    background-color: #6a006a;
-    color: white
-  }
+    article{
+        background-color: #ECECEC;
+        width: 1050px;
+        height: 300px;
+        border-radius: 17px;
+        margin-left: 40px;
+        margin-top: 35px;
+    }
 
+    .container-prog h3{
+        margin-top: 40px;
+        margin-left: 40px;
+    }
 
-  
-  .detalhes{
-    margin-left: 70px;
-    display: flex;
-    margin-top: 100px;  
-  
-  }
-  .detalhes h2{
-    font-size: 25px;
-    margin-left: 40px;
-    margin-top: 28px;
+    .container-prog p{
+        margin-top: 40px;
+        margin-left: 40px;
+    }
+
+    .anexar input{
+        margin-left: 40px;
+        margin-top: 20px;
+        
+    }
     
-  }
-
- .texto-detalhe{
-  margin-left: 70px;
-  margin-top: 40px;
-  margin-right: 60px;
- }
-
- #footer {
-  font-size: 14px;
-  background: grey;
-  margin-top: 100px;
-}
-
-#footer .footer-newsletter {
-  padding: 50px 0;
-  background: var(--eggwhite);
-  text-align: center;
-  font-size: 15px;
-  color: var(--black);
-}
-
-#footer .footer-newsletter h4 {
-  font-size: 24px;
-  margin: 0 0 20px 0;
-  padding: 0;
-  line-height: 1;
-  font-weight: 600;
-  color: var(--darkgreen);
-}
-
-#footer .footer-newsletter form {
-  margin-top: 30px;
-  background: var(--eggwhite);
-  padding: 6px 10px;
-  position: relative;
-  border-radius: 50px;
-  box-shadow: 0px 2px 15px var(--black);
-  text-align: left;
-}
-
-#footer .footer-newsletter form input[type=email] {
-  border: 0;
-  padding: 4px 8px;
-  width: calc(100% - 100px);
-}
-
-#footer .footer-newsletter form input[type=submit] {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  border: 0;
-  background: none;
-  font-size: 16px;
-  padding: 0 20px;
-  background: var(--lightgreen);
-  color: var(--eggwhite);
-  transition: 0.3s;
-  border-radius: 50px;
-  box-shadow: 0px 2px 15px var(--black);
-}
-
-#footer .footer-newsletter form input[type=submit]:hover {
-  background: var(--green);
-}
-
-#footer .footer-top {
-  padding: 60px 0 30px 0;
-  background: var(--eggwhite);
-}
-
-#footer .footer-top .footer-contact {
-  margin-bottom: 30px;
-}
-
-#footer .footer-top .footer-contact h3 {
-  font-size: 28px;
-  margin: 0 0 10px 0;
-  padding: 2px 0 2px 0;
-  line-height: 1;
-  text-transform: uppercase;
-  font-weight: 600;
-  color: var(--darkgreen);
-}
-
-#footer .footer-top .footer-contact p {
-  font-size: 14px;
-  line-height: 24px;
-  margin-bottom: 0;
-  font-family: "Jost", sans-serif;
-  color: var(--darkywhite);
-}
-
-#footer .footer-top h4 {
-  font-size: 16px;
-  font-weight: bold;
-  color: var(--darkgreen);
-  position: relative;
-  padding-bottom: 12px;
-}
-
-#footer .footer-top .footer-links {
-  margin-bottom: 30px;
-}
-
-#footer .footer-top .footer-links ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-#footer .footer-top .footer-links ul i {
-  padding-right: 2px;
-  color: var(--lightgreen);
-  font-size: 18px;
-  line-height: 1;
-}
-
-#footer .footer-top .footer-links ul li {
-  padding: 10px 0;
-  display: flex;
-  align-items: center;
-}
-
-#footer .footer-top .footer-links ul li:first-child {
-  padding-top: 0;
-}
-
-#footer .footer-top .footer-links ul a {
-  color: var(--gray);
-  transition: 0.3s;
-  display: inline-block;
-  line-height: 1;
-}
-
-#footer .footer-top .footer-links ul a:hover {
-  text-decoration: none;
-  color: var(--lightgreen);
-}
-
-#footer .footer-top .social-links a {
-  font-size: 18px;
-  display: inline-block;
-  background: var(--lightgreen);
-  color: var(--eggwhite);
-  line-height: 1;
-  padding: 8px 0;
-  margin-right: 4px;
-  border-radius: 50%;
-  text-align: center;
-  width: 36px;
-  height: 36px;
-  transition: 0.3s;
-}
-
-#footer .footer-top .social-links a:hover {
-  background: var(--lightgreen);
-  color: var(--eggwhite);
-  text-decoration: none;
-}
-
-#footer .footer-bottom {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  color: var(--eggwhite);
-}
-
-#footer .copyright {
-  float: left;
-}
-
-#footer .credits {
-  float: right;
-  font-size: 13px;
-}
-
-#footer .credits a {
-  transition: 0.3s;
-}
-
-@media (max-width: 768px) {
-  #footer .footer-bottom {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-
-  #footer .copyright,
-  #footer .credits {
-    text-align: center;
-    float: none;
-  }
-
-  #footer .credits {
-    padding-top: 4px;
-  }
-}
