@@ -176,6 +176,8 @@
     display: flex;
     list-style: none;
     align-items: center;
+    margin-right: 250px;
+
   }
   
   .navbar li {
@@ -190,9 +192,10 @@
     padding: 10px 0 10px 30px;
     font-size: 15px;
     font-weight: 500;
-    color: white;
+    color: #6F6F6F;
     white-space: nowrap;
     transition: 0.3s;
+    font-weight: 550;    
   }
   
   .navbar a i,
@@ -440,7 +443,7 @@
     
     article{
         background-color: #ECECEC;
-        width: 1050px;
+        width: 80%;
         height: 300px;
         border-radius: 17px;
         margin-left: 40px;
@@ -466,8 +469,8 @@
 
   .container-progg{
     display: flex;
-    margin-left: 188px;
-    width: 1500px;
+    margin-left: 13.4%;
+    width: 80%;
 }
 
 .container-progg h3{
@@ -714,3 +717,4 @@ button[type="submit"]:hover {
     padding-top: 4px;
   }
 }
+
