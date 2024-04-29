@@ -459,7 +459,258 @@
 
     .anexar input{
         margin-left: 40px;
-        margin-top: 20px;
-        
+        margin-top: 20px; 
     }
     
+  /**/
+
+  .container-progg{
+    display: flex;
+    margin-left: 188px;
+    width: 1500px;
+}
+
+.container-progg h3{
+  margin-top: 40px;
+  margin-left: 40px;
+  margin-bottom: 40px;
+}
+
+.container-progg p{
+  margin-top: 40px;
+  margin-left: 40px;
+}
+
+.input-group {
+  margin-bottom: 20px; 
+  display: flex; 
+  flex-direction: column; 
+  margin-left: 40px;
+}
+
+.input-group label {
+  margin-bottom: 10px; 
+}
+
+.input-group input[type="text"] {
+  padding: 15px; 
+  border: 1px solid #ccc; 
+  width: 90%; 
+  box-sizing: border-box;
+  border: none;
+  
+}
+
+
+.forms-vaga{
+  background-color: #ECECEC;
+  height: 555px;
+  border-radius: 17px;
+  margin-left: 40px;
+  margin-top: 35px;
+}
+button[type="submit"] {
+  background-color: #7E12C0;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 1100px;
+  margin-top: 20px;
+}
+
+button[type="submit"]:hover {
+  background-color: #6a006a;
+  color: white
+}
+
+#footer {
+  font-size: 14px;
+  background: grey;
+  margin-top: 100px;
+}
+
+#footer .footer-newsletter {
+  padding: 50px 0;
+  background: var(--eggwhite);
+  text-align: center;
+  font-size: 15px;
+  color: var(--black);
+}
+
+#footer .footer-newsletter h4 {
+  font-size: 24px;
+  margin: 0 0 20px 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 600;
+  color: var(--darkgreen);
+}
+
+#footer .footer-newsletter form {
+  margin-top: 30px;
+  background: var(--eggwhite);
+  padding: 6px 10px;
+  position: relative;
+  border-radius: 50px;
+  box-shadow: 0px 2px 15px var(--black);
+  text-align: left;
+}
+
+#footer .footer-newsletter form input[type=email] {
+  border: 0;
+  padding: 4px 8px;
+  width: calc(100% - 100px);
+}
+
+#footer .footer-newsletter form input[type=submit] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border: 0;
+  background: none;
+  font-size: 16px;
+  padding: 0 20px;
+  background: var(--lightgreen);
+  color: var(--eggwhite);
+  transition: 0.3s;
+  border-radius: 50px;
+  box-shadow: 0px 2px 15px var(--black);
+}
+
+#footer .footer-newsletter form input[type=submit]:hover {
+  background: var(--green);
+}
+
+#footer .footer-top {
+  padding: 60px 0 30px 0;
+  background: var(--eggwhite);
+}
+
+#footer .footer-top .footer-contact {
+  margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-contact h3 {
+  font-size: 28px;
+  margin: 0 0 10px 0;
+  padding: 2px 0 2px 0;
+  line-height: 1;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--darkgreen);
+}
+
+#footer .footer-top .footer-contact p {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 0;
+  font-family: "Jost", sans-serif;
+  color: var(--darkywhite);
+}
+
+#footer .footer-top h4 {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--darkgreen);
+  position: relative;
+  padding-bottom: 12px;
+}
+
+#footer .footer-top .footer-links {
+  margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#footer .footer-top .footer-links ul i {
+  padding-right: 2px;
+  color: var(--lightgreen);
+  font-size: 18px;
+  line-height: 1;
+}
+
+#footer .footer-top .footer-links ul li {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+#footer .footer-top .footer-links ul li:first-child {
+  padding-top: 0;
+}
+
+#footer .footer-top .footer-links ul a {
+  color: var(--gray);
+  transition: 0.3s;
+  display: inline-block;
+  line-height: 1;
+}
+
+#footer .footer-top .footer-links ul a:hover {
+  text-decoration: none;
+  color: var(--lightgreen);
+}
+
+#footer .footer-top .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: var(--lightgreen);
+  color: var(--eggwhite);
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+#footer .footer-top .social-links a:hover {
+  background: var(--lightgreen);
+  color: var(--eggwhite);
+  text-decoration: none;
+}
+
+#footer .footer-bottom {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: var(--eggwhite);
+}
+
+#footer .copyright {
+  float: left;
+}
+
+#footer .credits {
+  float: right;
+  font-size: 13px;
+}
+
+#footer .credits a {
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  #footer .footer-bottom {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  #footer .copyright,
+  #footer .credits {
+    text-align: center;
+    float: none;
+  }
+
+  #footer .credits {
+    padding-top: 4px;
+  }
+}
