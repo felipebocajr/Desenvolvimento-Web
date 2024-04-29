@@ -17,7 +17,7 @@ $stmt->bind_param("i", $vaga);
 $stmt->execute();
 $stmt->store_result();
 
-$pasta = "curriculos/";
+$pasta = "admin/curriculos/";
 $nomeDoCurriculo = $curriculo["name"];
 $novoNomeDoCurriculo = uniqid();
 $extensao = strtolower(pathinfo($nomeDoCurriculo, PATHINFO_EXTENSION));
