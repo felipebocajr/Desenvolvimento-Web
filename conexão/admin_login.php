@@ -24,7 +24,7 @@ $mensagem_erro = isset($_GET['erro']) ? $_GET['erro'] : '';
                 <?php if (!empty($mensagem_erro)): ?>
                     <p style="color: red;"><?php echo $mensagem_erro; ?></p>
                 <?php endif; ?>
-                <form action="verificar_login_admin.php" method="post">
+                <form action="admin_verificar_login.php" method="post">
                     <label for="nome_usuario">Nome de Usuário:</label>
                     <input type="text" id="nome_usuario" name="nome_usuario" required>
 

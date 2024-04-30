@@ -20,22 +20,29 @@
     <option value="">Selecione a vaga</option>
 
     <?php
+
+    // conexão com o banco de dados
     $conexao = new mysqli('localhost', 'root', '', 'sunsage_db');
     if ($conexao->connect_error) {
         die("Erro de conexão: " . $conexao->connect_error);
     }
 
+    // atribui a uma variável uma query com todas as vagas
     $query = "SELECT id, nome, vagas_livres FROM vaga";
     $result = $conexao->query($query);
 
+    // enquanto houver vagas disponíveis, imprime o nome da vaga e quantas vagas estão abertas
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
-            echo "<option value='" . $row['id'] . "'>" . $row['nome'] . " - Vagas abertas: " . $row['vagas_livres'] . "</option>";
+            if ($row["vagas_livres"] > 0)
+                echo "<option value='" . $row['id'] . "'>" . $row['nome'] . " - Vagas abertas: " . $row['vagas_livres'] . "</option>";
+            continue;
         }
     } else {
         echo "<option disabled>Nenhuma vaga disponível</option>";
     }
 
+    // fecha a conexão
     $conexao->close();
     ?>
 
@@ -55,19 +62,7 @@
     </form>
 
     <script>
-        function validarCPF() {
-            var cpfInput = document.getElementById("cpf");
-            var cpf = cpfInput.value.replace(/[^\d]/g, '');
-
-            if (cpf.length !== 11 || cpfInput.value !== cpf) {
-                alert("CPF inválido. Por favor, insira um CPF válido.");
-                cpfInput.value = cpf;
-                return false;
-            }
-
-            return true;
-        }
-
+        //faz a limpeza do campo CPF, o limitando a 11 caracteres e bloqueando caracteres especiais
         document.addEventListener("DOMContentLoaded", function () {
             var cpfInput = document.getElementById("cpf");
             cpfInput.addEventListener("input", function () {

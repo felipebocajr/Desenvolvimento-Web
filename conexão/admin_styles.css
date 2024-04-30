@@ -48,11 +48,11 @@ th {
 }
 
 #candidatos-table {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
 }
 
 .btn-atualizar {
-    margin: 10px;     
+    margin: 10px;
 }
 
 .alterarsitu {
@@ -74,11 +74,24 @@ th {
     color: blue;
 }
 
-.bemvindo{
+.bemvindo {
     display: flex;
-    margin-left: 125px;
+    margin-left: 7.5em;
 }
 
 .nomeadmin {
     font-weight: bolder;
+}
+
+.adicionarvagas {
+    margin-left: 30em;
+}
+
+.botaodireita {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
 }
