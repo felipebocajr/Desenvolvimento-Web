@@ -49,12 +49,6 @@ $stmt_candidato->execute();
 //obter o ID do ultimo candidato inserido
 $id_candidato = $stmt_candidato->insert_id;
 
-// Decrementar o número de vagas livres
-$sql_decrement_vagas = "UPDATE vaga SET vagas_livres = vagas_livres - 1 WHERE id = ?";
-$stmt_decrement_vagas = $strcon->prepare($sql_decrement_vagas);
-$stmt_decrement_vagas->bind_param("i", $vaga);
-$stmt_decrement_vagas->execute();
-$stmt_decrement_vagas->close();
 
 $stmt_candidato->close(); 
 
