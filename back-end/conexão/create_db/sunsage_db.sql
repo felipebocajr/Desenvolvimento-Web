@@ -27,6 +27,8 @@ SET time_zone = "+00:00";
 -- Estrutura para tabela `administrador`
 --
 
+
+
 CREATE TABLE `administrador` (
   `ID` int(11) NOT NULL,
   `nome_usuario` varchar(25) DEFAULT NULL,
@@ -34,7 +36,19 @@ CREATE TABLE `administrador` (
   `email` varchar(50) DEFAULT NULL,
   `nome_completo` varchar(255) DEFAULT NULL, 
   `data_criacao` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
+
+-- Administrador 1
+INSERT INTO administrador (nome_usuario, senha, email, nome_completo) 
+VALUES ('silva_maria.admin', 'maria123', 'maria.silva@gmail.com', 'Maria da Silva');
+
+-- Administrador 2
+INSERT INTO administrador (nome_usuario, senha, email, nome_completo) 
+VALUES ('santos_joao.admin', 'joao123', 'joao.santos@gmail.com', 'João Santos');
+
+-- Administrador 3
+INSERT INTO administrador (nome_usuario, senha, email, nome_completo) 
+VALUES ('oliveira_andre.admin', 'andre123', 'andre.oliveira@gmail.com', 'André Oliveira');
 
 -- --------------------------------------------------------
 
@@ -45,7 +59,7 @@ CREATE TABLE `administrador` (
 CREATE TABLE `administrador_vaga` (
   `ID_administrador` int(11) DEFAULT NULL,
   `ID_vaga` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 -- --------------------------------------------------------
 
@@ -62,7 +76,7 @@ CREATE TABLE `candidato` (
   `paths` varchar(100) NOT NULL,
   `situacao` varchar(20) NOT NULL DEFAULT 'não definida',
   `data_envio` datetime NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Despejando dados para a tabela `candidato`
@@ -83,7 +97,7 @@ INSERT INTO `candidato` (`ID`, `nome`, `CPF`, `email`, `numero_telefone`, `paths
 CREATE TABLE `candidato_vaga` (
   `ID_candidato` int(11) DEFAULT NULL,
   `ID_vaga` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 -- --------------------------------------------------------
 
@@ -95,8 +109,14 @@ CREATE TABLE `vaga` (
   `ID` int(11) NOT NULL,
   `nome` varchar(255) DEFAULT NULL,
   `quantidade` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
+INSERT INTO vaga (nome, vagas_livres) VALUES
+('Engenheiro de Energia Solar', 5),
+('Consultor de Eficiência Energética', 3),
+('Técnico em Instalação de Energia Solar', 4),
+('Analista de Marketing Verde', 2),
+('Auxiliar de Instalação de Energia Solar Fotovoltaica', 6);
 --
 -- Índices para tabelas despejadas
 --
