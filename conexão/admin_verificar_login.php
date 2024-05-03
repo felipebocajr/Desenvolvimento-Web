@@ -26,7 +26,7 @@ if (mysqli_num_rows($resultado) == 1) {
     // mensagem de erro caso as credenciais estejam incorretas
     $mensagem_erro = "Nome de usuário ou senha incorretos.";
     // redireciona de volta para o login com a mensagem de erro
-    header("Location: login_admin.php?erro=" . urlencode($mensagem_erro)); 
+    header("Location: admin_login.php?erro=" . urlencode($mensagem_erro)); 
     exit(); // encerra o script após o redirecionamento
 }
 ?>

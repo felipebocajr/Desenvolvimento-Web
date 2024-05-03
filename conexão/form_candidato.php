@@ -13,7 +13,7 @@
 
     <h2>Cadastro de Candidato</h2>
 
-    <form enctype="multipart/form-data" id="form-candidato" method="POST" action="add_candidato.php"
+    <form enctype="multipart/form-data" id="form-candidato" method="POST" action="../conexão/add_candidato.php"
         enctype="multipart/form-data" onsubmit="return validarCPF()">
         <label for="vaga">Vaga:</label>
         <select class = "vaga" id="vaga" name="vaga" required>
