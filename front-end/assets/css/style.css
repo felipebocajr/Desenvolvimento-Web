@@ -168,7 +168,9 @@ h6 {
 */
 .navbar {
   padding: 0;
+  margin-right: 300px;
 }
+
 
 .navbar ul {
   margin: 0;
@@ -180,6 +182,7 @@ h6 {
 
 .navbar li {
   position: relative;
+  
 }
 
 .navbar a,
@@ -548,7 +551,6 @@ section {
 
 .section-bg {
   background-color: transparent var(--darkywhite);
-  opacity: 50%;
 }
 
 .section-title {
@@ -1353,6 +1355,7 @@ section {
 --------------------------------------------------------------*/
 .faq .faq-list {
   padding: 0 100px;
+  color: #000
 }
 
 .faq .faq-list ul {
@@ -1753,3 +1756,4 @@ section {
     padding-top: 4px;
   }
 }
+

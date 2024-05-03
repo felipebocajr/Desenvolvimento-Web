@@ -152,7 +152,7 @@
   }
   
   #header .logo a {
-    color: var(--eggwhite);
+    color: #6F6F6F;
   }
   
   #header .logo img {
@@ -444,7 +444,7 @@
     article{
         background-color: #ECECEC;
         width: 80%;
-        height: 300px;
+        height: 350px;
         border-radius: 17px;
         margin-left: 40px;
         margin-top: 35px;
@@ -718,3 +718,25 @@ button[type="submit"]:hover {
   }
 }
 
+.container-prog label {
+  font-size: 16px;
+  margin-bottom: 5px; /* Espaçamento abaixo do rótulo */
+  margin-left: 40px;
+  margin-top: 30px;
+  
+
+}
+
+select {
+  font-size: 14px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 270px; /* Largura do campo de seleção */
+  box-sizing: border-box;
+  margin-bottom: 20px; /* Espaçamento abaixo do campo de seleção */
+  background-color: #7E12C0;
+  color: white;
+  font-weight: 600;
+
+}
