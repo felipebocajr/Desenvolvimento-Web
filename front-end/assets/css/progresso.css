@@ -470,6 +470,7 @@
   .container-progg{
     display: flex;
     margin-left: 13.4%;
+    width: 100%
     
 }
 
@@ -738,5 +739,4 @@ select {
   background-color: #7E12C0;
   color: white;
   font-weight: 600;
-
 }

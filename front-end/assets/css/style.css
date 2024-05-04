@@ -1571,6 +1571,7 @@ section {
 #footer {
   font-size: 14px;
   background: var(--darkgreen);
+  
 }
 
 #footer .footer-newsletter {
@@ -1633,6 +1634,7 @@ section {
 
 #footer .footer-top .footer-contact {
   margin-bottom: 30px;
+  margin-left: 100px;
 }
 
 #footer .footer-top .footer-contact h3 {
@@ -1643,6 +1645,7 @@ section {
   text-transform: uppercase;
   font-weight: 600;
   color: var(--darkgreen);
+  
 }
 
 #footer .footer-top .footer-contact p {
@@ -1757,3 +1760,11 @@ section {
   }
 }
 
+.container-contact{
+  justify-content: center;
+  margin-left: 500px;
+}
+
+.title-contact{
+  margin-right: 510px;
+}
