@@ -434,14 +434,9 @@ h6 {
 
 .center-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+ 
 }
 
-.container {
-  text-align: center;
-}
 
 h2 {
   margin-bottom: 10px;
@@ -449,8 +444,8 @@ h2 {
 }
 
 .input-container {
-  display: inline-flex;
   align-items: center;
+ 
 }
 
 input[type="text"] {
