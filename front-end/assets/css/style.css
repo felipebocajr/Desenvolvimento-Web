@@ -168,6 +168,7 @@ h6 {
 */
 .navbar {
   padding: 0;
+  margin-right: 300px;
 }
 
 .navbar ul {
@@ -176,6 +177,7 @@ h6 {
   display: flex;
   list-style: none;
   align-items: center;
+  
 }
 
 .navbar li {
