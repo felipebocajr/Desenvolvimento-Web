@@ -21,7 +21,7 @@
         }
     }
 
-    // Função para ler todos os administradores
+    // função para ler todos os administradores
     function readAdmins()
     {
         global $conn;
@@ -36,7 +36,7 @@
         }
     }
 
-    // Função para atualizar um administrador
+    // função para atualizar um administrador
     function updateAdmin($id, $nome_usuario, $senha, $email_id, $nome, $data_criacao, $vaga_id)
     {
         global $conn;
@@ -48,7 +48,7 @@
         }
     }
 
-    // Função para excluir um administrador
+    // função para excluir um administrador
     function deleteAdmin($id)
     {
         global $conn;
@@ -60,7 +60,7 @@
         }
     }
 
-    // Função para criar uma vaga
+    // função para criar uma vaga
     function createVaga($nome, $quantidade, $administrador_id)
     {
         global $conn;
@@ -73,7 +73,7 @@
         }
     }
 
-    // Função para ler todas as vagas
+    // função para ler todas as vagas
     function readVagas()
     {
         global $conn;
@@ -88,7 +88,7 @@
         }
     }
 
-    // Função para atualizar uma vaga
+    // função para atualizar uma vaga
     function updateVaga($id, $nome, $quantidade, $administrador_id)
     {
         global $conn;
@@ -100,7 +100,7 @@
         }
     }
 
-    // Função para excluir uma vaga
+    // função para excluir uma vaga
     function deleteVaga($id)
     {
         global $conn;
@@ -112,7 +112,7 @@
         }
     }
 
-    // Função para criar um candidato
+    // função para criar um candidato
     function createCandidato($nome, $cpf, $email, $numero_telefone, $vaga_id, $curriculo_id)
     {
         global $conn;
@@ -125,7 +125,7 @@
         }
     }
 
-    // Função para ler todos os candidatos
+    // função para ler todos os candidatos
     function readCandidatos()
     {
         global $conn;
@@ -140,7 +140,7 @@
         }
     }
 
-    // Função para atualizar um candidato
+    // função para atualizar um candidato
     function updateCandidato($id, $nome, $cpf, $email, $numero_telefone, $vaga_id, $curriculo_id)
     {
         global $conn;
@@ -152,7 +152,7 @@
         }
     }
 
-    // Função para excluir um candidato
+    // função para excluir um candidato
     function deleteCandidato($id)
     {
         global $conn;
@@ -164,7 +164,7 @@
         }
     }
 
-    // Função para criar um currículo
+    // função para criar um currículo
     function createCurriculo($curriculo, $data_envio)
     {
         global $conn;
@@ -177,7 +177,7 @@
         }
     }
 
-    // Função para ler currículos
+    // função para ler currículos
     function readCurriculos()
     {
         global $conn;
@@ -192,7 +192,7 @@
         }
     }
 
-    // Função para atualizar um currículo
+    // função para atualizar um currículo
     function updateCurriculo($id, $curriculo, $data_envio)
     {
         global $conn;
@@ -204,7 +204,7 @@
         }
     }
 
-    // Função para excluir um currículo
+    // função para excluir um currículo
     function deleteCurriculo($id)
     {
         global $conn;
