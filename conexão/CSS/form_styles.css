@@ -29,7 +29,8 @@ form input[type="text"],
 form input[type="email"],
 form input[type="tel"],
 form input[type="file"],
-form button {
+form button,
+select#vaga {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
@@ -37,6 +38,7 @@ form button {
     border-radius: 3px;
     box-sizing: border-box;
 }
+
 
 form button {
     background-color: #007bff;
@@ -52,7 +54,8 @@ table {
     border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
@@ -71,6 +74,33 @@ th {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+#candidatos-table {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1); 
+}
+
+.btn-atualizar {
+    margin: 10px;     
+}
+
 .alterarsitu {
+    text-align: center;
+}
+
+.tabletop th {
+    text-align: center;
+}
+
+.statusSelect {
+    width: 100px;
+    height: 25px;
+}
+
+.campo_vaga {
+    width: 300px;
     background-color: blue;
+    color: blue;
+}
+
+.bemvindo {
+    color: red;
 }
