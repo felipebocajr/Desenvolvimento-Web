@@ -13,7 +13,7 @@ $mensagem_erro = isset($_GET['erro']) ? $_GET['erro'] : '';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login de Administrador</title>
-    <link rel="stylesheet" href="login_styles.css">
+    <link rel="stylesheet" href="CSS/login_styles.css">
 </head>
 
 <body>
