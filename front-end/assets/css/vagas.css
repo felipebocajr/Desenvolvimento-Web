@@ -222,11 +222,7 @@ h6 {
   font-weight: 600;
 }
 
-.navbar .getstarted:hover,
-.navbar .getstarted:focus:hover {
-  color: #fff;
-  background: var(--lightgreen);
-}
+
 
 .navbar .dropdown ul {
   display: block;
@@ -434,14 +430,9 @@ h6 {
 
 .center-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+ 
 }
 
-.container {
-  text-align: center;
-}
 
 h2 {
   margin-bottom: 10px;
@@ -449,8 +440,8 @@ h2 {
 }
 
 .input-container {
-  display: inline-flex;
   align-items: center;
+ 
 }
 
 input[type="text"] {
