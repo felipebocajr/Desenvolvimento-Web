@@ -19,4 +19,5 @@ if (!$db_selected) {
 }
 
 echo "Conexão bem-sucedida";
+#fim do programa
 ?>
