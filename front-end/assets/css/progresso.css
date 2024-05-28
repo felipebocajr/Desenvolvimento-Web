@@ -533,6 +533,15 @@ button[type="submit"]:hover {
   font-size: 14px;
   background: grey;
   margin-top: 100px;
+  
+}
+
+.bloco a{
+  color:#444444
+}
+
+.bloco a:hover{
+  color: #7E12C0;
 }
 
 #footer .footer-newsletter {
