@@ -95,3 +95,10 @@ th {
     border-radius: 5px;
     text-decoration: none;
 }
+
+table th {
+    background-color: rgb(194, 194, 194);
+    color: black;
+}
+
+

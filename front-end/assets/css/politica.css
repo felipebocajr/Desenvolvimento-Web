@@ -1,0 +1,24 @@
+.politica-site {
+    padding: 7rem;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+/*
+header
+*/
+#header {
+    transition: all 0.5s;
+    z-index: 997;
+    padding: 15px 0;
+  }
+  
+  #header.header-scrolled,
+  #header.header-inner-pages {
+    background: #919191;
+    opacity: 92%;
+  }
+  
+  #header.header-scrolled a {
+    color: var(--eggwhite)
+  }

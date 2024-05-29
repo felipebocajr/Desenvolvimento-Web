@@ -772,12 +772,17 @@ select {
   font-weight: 600;
 }
 
+.fixed-top {
+  margin-bottom: 5rem ;
+}
+
 .check-check {
   margin-left: 5rem;
 }
 
 .politica-site {
-  margin-top: 1rem;
+  
   margin-left: 60px;
   margin-right: 200px;
 }
+
