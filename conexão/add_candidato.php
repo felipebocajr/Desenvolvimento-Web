@@ -59,4 +59,9 @@ $stmt_candidato_vaga->bind_param("ii", $id_candidato, $vaga);
 $stmt_candidato_vaga->execute();
 $stmt_candidato_vaga->close();
 
+// Redireciona para a página inicial após o envio
+header("Location: /index.html");
+exit();
+
+
 ?> 

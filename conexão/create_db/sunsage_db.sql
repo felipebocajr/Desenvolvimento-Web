@@ -1,7 +1,6 @@
+CREATE DATABASE sunsage_db;
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
+USE sunsage_db;
 
 CREATE TABLE `administrador` (
   `ID` int(11) AUTO_INCREMENT PRIMARY KEY,
@@ -23,14 +22,12 @@ CREATE TABLE `vaga` (
   `vagas_livres` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-
 INSERT INTO `vaga` (`ID`, `nome`, `vagas_livres`) VALUES
 (1, 'Engenheiro de Energia Solar', 5),
 (2, 'Consultor de Eficiência Energética', 3),
 (3, 'Técnico em Instalação de Energia Solar', 4),
 (4, 'Analista de Marketing Verde', 2),
 (5, 'Auxiliar de Instalação de Energia Solar Fotovoltaica', 6);
-
 
 CREATE TABLE `candidato` (
   `ID` int(11) AUTO_INCREMENT PRIMARY KEY,
@@ -43,19 +40,26 @@ CREATE TABLE `candidato` (
   `data_envio` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-
 CREATE TABLE `administrador_vaga` (
   `ID_administrador` int(11) DEFAULT NULL,
   `ID_vaga` int(11) DEFAULT NULL,
-    FOREIGN KEY ('ID_administrador') REFERENCES administrador('ID'),
-  FOREIGN KEY ('ID_vaga') REFERENCES vaga('ID')
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 
+  FOREIGN KEY (`ID_administrador`) REFERENCES `administrador`(`ID`),
+  FOREIGN KEY (`ID_vaga`) REFERENCES `vaga`(`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+INSERT INTO `administrador_vaga` (`ID_administrador`, `ID_vaga`) VALUES
+(1, 1),
+(1, 2),
+(1, 5),
+(2, 3),
+(2, 4),
+(3, 1),
+(3, 2),
+(3, 3);
 
 CREATE TABLE `candidato_vaga` (
   `ID_candidato` int(11) NOT NULL,
   `ID_vaga` int(11) NOT NULL,
-  FOREIGN KEY ('ID_candidato') REFERENCES candidato('ID'),
-  FOREIGN KEY ('ID_vaga') REFERENCES vaga('ID')
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 
-
+  FOREIGN KEY (`ID_candidato`) REFERENCES `candidato`(`ID`),
+  FOREIGN KEY (`ID_vaga`) REFERENCES `vaga`(`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

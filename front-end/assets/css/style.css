@@ -477,7 +477,7 @@ h6 {
 }
 
 #hero .btn-watch-video:hover i {
-  color: ;
+  color: var(--lightgreen);
 }
 
 #hero .animated {
