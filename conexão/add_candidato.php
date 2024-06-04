@@ -60,7 +60,7 @@ $stmt_candidato_vaga->execute();
 $stmt_candidato_vaga->close();
 
 // Redireciona para a página inicial após o envio
-header("Location: /index.html");
+header("Location: ../front-end/index.html");
 exit();
 
 
