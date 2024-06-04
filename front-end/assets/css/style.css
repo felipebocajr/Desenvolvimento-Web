@@ -418,7 +418,7 @@ h6 {
 #hero {
   width: 100%;
   height: 80vh;
-  background-image:url(../img/wave4.png);
+  background-image:url(../img/wavegood.png);
   background-size: cover;
 }
 
@@ -435,7 +435,7 @@ h6 {
 }
 
 #hero h2 {
-  color: var(--darkywhite);
+  color: #3c8b3f;
   margin-bottom: 50px;
   font-size: 24px;
 }
@@ -450,7 +450,7 @@ h6 {
   border-radius: 50px;
   transition: 0.5s;
   margin: 10px 0 0 0;
-  color: var(--eggwhite);
+  color: #3c8b3f;
   background: var(--lightgreen);
 }
 
@@ -464,20 +464,20 @@ h6 {
   align-items: center;
   transition: 0.5s;
   margin: 10px 0 0 25px;
-  color: var(--eggwhite);
+  color: #3c8b3f;
   line-height: 1;
 }
 
 #hero .btn-watch-video i {
   line-height: 0;
-  color: var(--eggwhite);
+  color: #3c8b3f;
   font-size: 32px;
   transition: 0.3s;
   margin-right: 8px;
 }
 
 #hero .btn-watch-video:hover i {
-  color: var(--lightgreen);
+  color: ;
 }
 
 #hero .animated {
